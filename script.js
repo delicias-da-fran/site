@@ -16,7 +16,7 @@ formEncomenda.addEventListener("submit", (event) => {
     const dataFormatada = formatarDataBR(document.getElementById("data-entrega").value);
     const obs = document.getElementById("observacoes").value.trim();
 
-    const telefone = "5561999999999"; // Troque pelo número do WhatsApp da Fran (DDI + DDD + número)
+    const telefone = "5561999263072"; // Troque pelo número do WhatsApp da Fran (DDI + DDD + número)
 
     let mensagem = `Olá, *Delícias da Fran*! Gostaria de fazer uma encomenda:\n\n` +
                    `• *Cliente:* ${nome}\n` +
