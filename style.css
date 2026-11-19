@@ -1,0 +1,399 @@
+:root {
+    --fundo-creme: #fdf9f7;
+    --fundo-secao: #f7ede9;
+    --card-fundo: #ffffff;
+    --bordo: #8b262d;
+    --bordo-escuro: #691a20;
+    --pessego: #e69d78;
+    --pessego-claro: #f8e4da;
+    --texto-escuro: #36191b;
+    --texto-suave: #6b4e50;
+    --borda-suave: #e7d1ca;
+    --whatsapp: #25d366;
+    --whatsapp-hover: #1ebe5d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--fundo-creme);
+    color: var(--texto-escuro);
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color: rgba(253, 249, 247, 0.96);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--borda-suave);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--bordo);
+}
+
+.logo span {
+    font-style: italic;
+    color: var(--bordo-escuro);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--texto-escuro);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.25s;
+}
+
+.menu a:hover {
+    color: var(--bordo);
+}
+
+.btn-nav {
+    background-color: var(--bordo);
+    color: #fff !important;
+    padding: 9px 18px;
+    border-radius: 999px;
+}
+
+.btn-nav:hover {
+    background-color: var(--bordo-escuro);
+}
+
+/* Banner Principal */
+.hero {
+    min-height: 78vh;
+    padding: 115px 8% 60px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #fffaf8 0%, #f5e2da 100%);
+    border-bottom: 4px solid var(--bordo);
+}
+
+.hero-conteudo {
+    max-width: 670px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: var(--pessego-claro);
+    color: var(--bordo);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+}
+
+.hero-conteudo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.65rem;
+    line-height: 1.18;
+    margin-bottom: 18px;
+    color: var(--bordo-escuro);
+}
+
+.hero-conteudo p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--texto-suave);
+    margin-bottom: 28px;
+}
+
+.hero-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: var(--bordo);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.btn-principal:hover {
+    background-color: var(--bordo-escuro);
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    display: inline-block;
+    border: 1.5px solid var(--bordo);
+    color: var(--bordo);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 13px 24px;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.btn-secundario:hover {
+    background-color: var(--pessego-claro);
+}
+
+/* Seções Gerais */
+.secao {
+    padding: 80px 8%;
+}
+
+.secao-topo {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 45px;
+}
+
+.secao-topo h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--bordo);
+    margin-bottom: 10px;
+}
+
+.secao-topo p {
+    color: var(--texto-suave);
+    line-height: 1.6;
+}
+
+/* Cardápio */
+.cardapio {
+    background-color: var(--fundo-secao);
+    border-bottom: 1px solid var(--borda-suave);
+}
+
+.grid-cardapio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.card-menu {
+    background-color: var(--card-fundo);
+    border: 1px solid var(--borda-suave);
+    border-top: 4px solid var(--bordo);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(139, 38, 45, 0.06);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px dashed var(--borda-suave);
+}
+
+.card-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--bordo);
+}
+
+.tag-preco {
+    background-color: var(--pessego);
+    color: var(--texto-escuro);
+    font-weight: 700;
+    font-size: 0.82rem;
+    padding: 5px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.sub-info {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+    margin-bottom: 10px;
+}
+
+.lista-precos,
+.lista-simples {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lista-precos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f5ebe8;
+}
+
+.lista-precos li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.lista-precos strong {
+    color: var(--bordo);
+    white-space: nowrap;
+}
+
+.detalhe-item {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--texto-suave);
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.lista-simples li {
+    font-size: 0.92rem;
+    color: var(--texto-escuro);
+    padding-left: 14px;
+    position: relative;
+}
+
+.lista-simples li::before {
+    content: "•";
+    color: var(--bordo);
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+}
+
+/* Formulário */
+.form-box {
+    max-width: 580px;
+    margin: 0 auto;
+    background-color: var(--card-fundo);
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--borda-suave);
+    border-top: 4px solid var(--bordo);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-shadow: 0 6px 18px rgba(139, 38, 45, 0.06);
+}
+
+.linha-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.campo input,
+.campo textarea {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #d9bcb4;
+    background-color: #fffdfc;
+    color: var(--texto-escuro);
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: var(--bordo);
+}
+
+.btn-whatsapp {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--whatsapp);
+    color: #111;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--whatsapp-hover);
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--bordo);
+    color: #fdf6f4;
+    padding: 40px 8%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer .logo,
+.footer .logo span {
+    color: var(--pessego);
+}
+
+.footer p {
+    font-size: 0.92rem;
+    opacity: 0.92;
+}
+
+.copyright {
+    font-size: 0.82rem;
+    opacity: 0.78;
+}
+
+@media (max-width: 768px) {
+    .hero-conteudo h1 {
+        font-size: 2rem;
+    }
+    .linha-dupla,
+    .duas-colunas {
+        grid-template-columns: 1fr;
+    }
+    .form-box {
+        padding: 24px 18px;
+    }
+}
